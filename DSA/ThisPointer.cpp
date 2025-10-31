@@ -4,7 +4,6 @@ class thispointer{
     public: 
     void dislay(){
         cout<<"This pointer holds:"<<this<<endl;
-
     }
 };
 int main(){
