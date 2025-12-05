@@ -27,7 +27,7 @@ int main(){
     printf("The elements of the array are - ");   
     for (int i = 0; i < n; i++)  
     printf("%d ", a[i]);   
-    printf("\nElement to be searched is - %d", val);  
+    printf("\nElement to be searched is : %d", val);  
     if (res == -1)  
     printf("\nElement is not present in the array");  
     else  
