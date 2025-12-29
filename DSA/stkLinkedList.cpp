@@ -14,14 +14,14 @@ struct node *head;
 void main ()  
 {  
     int choice=0;     
-    printf("\n*********Stack operations using linked list*********\n");  
-    printf("\n----------------------------------------------\n");  
+    cout<<"\n*********Stack operations using linked list*********\n";  
+    cout<<"\n----------------------------------------------\n";  
     while(choice != 4)  
     {  
-        printf("\n\nChose one from the below options...\n");  
-        printf("\n1.Push\n2.Pop\n3.Show\n4.Exit");  
-        printf("\n Enter your choice \n");        
-        scanf("%d",&choice);  
+        cout<<"\n\nChose one from the below options...\n";  
+        cout<<"\n1.Push\n2.Pop\n3.Show\n4.Exit";  
+        cout<<"\n Enter your choice \n";        
+        cin>>choice;  
         switch(choice)  
         {  
             case 1:  
@@ -41,12 +41,12 @@ void main ()
             }  
             case 4:   
             {  
-                printf("Exiting....");  
+                cout<<"Exiting....";  
                 break;   
             }  
             default:  
             {  
-                printf("Please Enter valid choice ");  
+                cout<<"Please Enter valid choice ";  
             }   
     };  
 }  
@@ -57,12 +57,12 @@ void push ()
     struct node *ptr = (struct node*)malloc(sizeof(struct node));   
     if(ptr == NULL)  
     {  
-        printf("not able to push the element");   
+        cout<<"not able to push the element";   
     }  
     else   
     {  
-        printf("Enter the value");  
-        scanf("%d",&val);  
+        cout<<"Enter the value";  
+        cin>>val;  
         if(head==NULL)  
         {         
             ptr->val = val;  
@@ -76,7 +76,7 @@ void push ()
             head=ptr;  
                
         }  
-        printf("Item pushed");  
+        cout<<"Item pushed";  
           
     }  
 }  
@@ -87,7 +87,7 @@ void pop()
     struct node *ptr;  
     if (head == NULL)  
     {  
-        printf("Underflow");  
+        cout<<"Underflow";  
     }  
     else  
     {  
@@ -95,7 +95,7 @@ void pop()
         ptr = head;  
         head = head->next;  
         free(ptr);  
-        printf("Item popped");  
+        cout<<"Item popped";  
           
     }  
 }  
@@ -106,14 +106,14 @@ void display()
     ptr=head;  
     if(ptr == NULL)  
     {  
-        printf("Stack is empty\n");  
+        cout<<"Stack is empty\n";  
     }  
     else  
     {  
-        printf("Printing Stack elements \n");  
+        cout<<"Printing Stack elements \n";  
         while(ptr!=NULL)  
         {  
-            printf("%d\n",ptr->val);  
+            cout<<ptr->val<<"\n";  
             ptr = ptr->next;  
         }  
     }  
